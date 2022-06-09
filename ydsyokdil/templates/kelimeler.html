@@ -3,5 +3,28 @@
 {% load static %}
 
 {% block content %}
-kelimeler sayfasi 
+    {% for kelime in kelimeler %}
+    <div class = "kelime">
+    <a href="{% url 'kelime_detail' kelime.name %}">
+    {{ kelime.name }} </a>
+    <br>
+    <img src="{{ kelime.image.url }}" alt="" >
+    </div>
+    {%  endfor %}
+{% endblock %}
+
+
+{% block contentright %}
+
+{% for kategori in kategoriler %}
+<div class = "kelime">
+<a href="{% url 'kategori_detail' kategori.slug %}">
+{{ kategori.name }} </a>
+
+
+</div>
+{%  endfor %}
+
+
+<p>sag blok</p>
 {% endblock %}

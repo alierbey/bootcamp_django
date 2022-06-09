@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'sayfalar.apps.SayfalarConfig',
     'kelimeler.apps.KelimelerConfig',
     'sozluk.apps.SozlukConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL = '/content/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'content')
